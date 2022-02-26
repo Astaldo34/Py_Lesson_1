@@ -14,7 +14,7 @@ print('одинаковые - ', price_list_up[9], id(price_list_up[9]))
 price_list_lower = sorted(price_list, reverse=True)
 print(price_list_lower)
 
-#Вывести цены пяти самых дорогих товаров. Сможете ли вывести цены этих товаров по возрастанию, написав минимум кода?
+# Вывести цены пяти самых дорогих товаров. Сможете ли вывести цены этих товаров по возрастанию, написав минимум кода?
 print(price_list_lower[:5])
 
 for item in price_list_lower[:5]:
