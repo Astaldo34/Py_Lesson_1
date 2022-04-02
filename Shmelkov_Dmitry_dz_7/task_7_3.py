@@ -1,6 +1,10 @@
 import os
 import shutil
 
-folders = {'my_project': ['settings', 'mainapp', 'adminapp', 'authapp']}
+os.makedirs('my_project\\templates', exist_ok=True)
 
-print(type(folders))
+for dr in os.listdir('my_project'):
+    for cld in os.listdir(os.path.join('my_project', dr)):
+        if cld == 'templates':
+            print(f'{dr}\\{cld}')
+            shutil.copytree(f'my_project\\{dr}\\{cld}', 'my_project\\templates', dirs_exist_ok=True)
